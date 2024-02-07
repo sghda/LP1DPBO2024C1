@@ -5,9 +5,9 @@ using namespace std;
 int main(){
 
 CRUD dpr;
-    dpr.tambahAnggotaDPR("Rain", "Pendidikan", "Partai A");
-    dpr.tambahAnggotaDPR("Techi", "Kesehatan", "Partai B");
-    dpr.tambahAnggotaDPR("Sala", "Pertanian", "Partai C");
+    dpr.tambahAnggotaDPR("Rain", "Badan Anggaran", "PKB");
+    dpr.tambahAnggotaDPR("Techi", "Badan Musyawarah", "PKS");
+    dpr.tambahAnggotaDPR("Sala", "Badan Anggaran", "PBB");
 
 
     int fitur;
@@ -29,7 +29,7 @@ CRUD dpr;
             cout << ">> Masukkan Nama: ";
             cin.ignore();
             getline(cin, nama);
-            cout << ">> Masukkan Namam Bidang: ";
+            cout << ">> Masukkan Nama Bidang: ";
             getline(cin, namaBidang);
             cout << ">> Masukkan Nama Partai: ";
             getline(cin, namaPartai);

@@ -109,7 +109,10 @@ class CRUD{
             }
         
             if (indexToEdit != -1) {
+                int id;
                 string nama, namaBidang, namaPartai;
+                cout << ">> Masukkan ID: ";
+                cin >> id;
                 cout << ">> Masukkan Nama: ";
                 cin.ignore();
                 getline(cin, nama);
@@ -129,9 +132,9 @@ class CRUD{
 
         void tampilkanAnggotaDPR() {
             cout << "\n >> Daftar Anggota DPR << " << endl;
-                cout << "ID \t Nama \t Bidang \t Partai" << endl;
+                cout << "ID \t Nama \t\t Bidang \t\t Partai" << endl;
             for (size_t i = 0; i < anggotaDPR.size(); ++i) {
-                cout << anggotaDPR[i].get_id() << " \t " << anggotaDPR[i].get_nama() << " \t " << anggotaDPR[i].get_namaBidang() << " \t " << anggotaDPR[i].get_namaPartai();
+                cout << anggotaDPR[i].get_id() << " \t " << anggotaDPR[i].get_nama() << " \t\t " << anggotaDPR[i].get_namaBidang() << " \t " << anggotaDPR[i].get_namaPartai();
                 cout << endl;
             }
         }
