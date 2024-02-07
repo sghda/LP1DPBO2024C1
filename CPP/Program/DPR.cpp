@@ -76,7 +76,7 @@ class CRUD{
         
         void hapusAnggotaDPR() {
             int id;
-            cout << "Masukkan ID anggota yang akan dihapus : ";
+            cout << ">> Masukkan ID anggota yang akan dihapus : ";
             cin >> id;
         
             int indexToDelete = -1, found = 0;
@@ -97,7 +97,7 @@ class CRUD{
 
         void editAnggotaDPR() {
             int id;
-            cout << "Masukkan ID anggota yang akan diedit : ";
+            cout << ">> Masukkan ID anggota yang akan diedit : ";
             cin >> id;
         
             int indexToEdit = -1, found = 0;
@@ -110,8 +110,13 @@ class CRUD{
         
             if (indexToEdit != -1) {
                 string nama, namaBidang, namaPartai;
-                cout << "Masukkan ID, Nama, Bidang dan Partai baru : ";
-                cin >> id >> nama >> namaBidang >> namaPartai;
+                cout << ">> Masukkan Nama: ";
+                cin.ignore();
+                getline(cin, nama);
+                cout << ">> Masukkan Nama Bidang: ";
+                getline(cin, namaBidang);
+                cout << ">> Masukkan Nama Partai: ";
+                getline(cin, namaPartai);
                 anggotaDPR[indexToEdit].set_id(id);
                 anggotaDPR[indexToEdit].set_nama(nama);
                 anggotaDPR[indexToEdit].set_namaBidang(namaBidang);
@@ -123,19 +128,16 @@ class CRUD{
         }
 
         void tampilkanAnggotaDPR() {
-            cout << "Daftar Anggota DPR : " << endl;
+            cout << "\n >> Daftar Anggota DPR << " << endl;
+                cout << "ID \t Nama \t Bidang \t Partai" << endl;
             for (size_t i = 0; i < anggotaDPR.size(); ++i) {
-                cout << "ID : " << anggotaDPR[i].get_id() << endl;
-                cout << "Nama : " << anggotaDPR[i].get_nama() << endl;
-                cout << "Bidang : " << anggotaDPR[i].get_namaBidang() << endl;
-                cout << "Partai : " << anggotaDPR[i].get_namaPartai() << endl;
+                cout << anggotaDPR[i].get_id() << " \t " << anggotaDPR[i].get_nama() << " \t " << anggotaDPR[i].get_namaBidang() << " \t " << anggotaDPR[i].get_namaPartai();
                 cout << endl;
             }
         }
 
         ~CRUD(){
         }
-
 };
 
 
