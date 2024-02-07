@@ -1,1 +1,3 @@
 # LP1DPBO2024C1
+# Janji
+Saya Salma Ghaida dengan NIM 2207186 mengerjakan Latihan Praktikum 1 dalam mata kuliah Desain Pemrograman Berbasis Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin...
